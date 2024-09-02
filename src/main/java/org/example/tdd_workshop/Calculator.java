@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Calculator {
     public int evaluate(String equation) {
-        String[] splitStrings = (equation.split("((?<=[+-/])|(?=[+-/]))"));
-        List<String> opList = Arrays.asList("+", "-", "/");
+        String[] splitStrings = (equation.split("((?<=[+-/*])|(?=[+-/*]))"));
+        List<String> opList = Arrays.asList("+", "-", "/", "*");
         Iterator<String> iterator = Arrays.stream(splitStrings).iterator();
         int currentValue = 0;
         String currentOp = null;
@@ -23,6 +23,7 @@ public class Calculator {
                     case "+" -> currentValue += currentIntValue;
                     case "-" -> currentValue -= currentIntValue;
                     case "/" -> currentValue /= currentIntValue;
+                    case "*" -> currentValue *= currentIntValue;
                     default -> {
                     }
                 }

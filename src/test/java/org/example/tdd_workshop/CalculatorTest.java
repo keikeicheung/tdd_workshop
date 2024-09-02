@@ -23,4 +23,9 @@ public class CalculatorTest {
         assertEquals(5, calculator.evaluate("15/3"));
     }
 
+    @Test
+    public void shouldReturnEightWhenTwoTimesFour() {
+        assertEquals(8, calculator.evaluate("2*4"));
+    }
+
 }
