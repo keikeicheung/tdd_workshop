@@ -17,4 +17,10 @@ public class CalculatorTest {
     public void shouldReturnTwoWhenFiveMinusThree() {
         assertEquals(2, calculator.evaluate("5-3"));
     }
+
+    @Test
+    public void shouldReturnFiveWhenFifteenDividedByThree() {
+        assertEquals(5, calculator.evaluate("15/3"));
+    }
+
 }
