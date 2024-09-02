@@ -12,4 +12,9 @@ public class CalculatorTest {
     public void shouldReturnFourWhenOnePlusThree() {
         assertEquals(4, calculator.evaluate("1+3"));
     }
+
+    @Test
+    public void shouldReturnTwoWhenFiveMinusThree() {
+        assertEquals(2, calculator.evaluate("5-3"));
+    }
 }
